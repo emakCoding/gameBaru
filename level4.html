@@ -68,6 +68,7 @@
           </div>
           <button
             type="submit"
+            x-on:click="window.location.href = 'penutup.html'"
             class="w-32 h-16 bg-red-500 rounded-3xl text-3xl font-utama self-center">
             Submit
           </button>
@@ -95,14 +96,25 @@
           get flippedCards() {
             return this.cards.filter((card) => card.flipped);
           },
+          get remainingCards() {
+            return this.cards.filter((card) => !card.cleared);
+          },
 
           async flipCard(card) {
+            if (this.flippedCards.length === 2) return;
+
             card.flipped = !card.flipped;
 
             if (this.flippedCards.length === 2) {
               await delay();
               if (this.flippedCards[0].abjad === this.flippedCards[1].abjad) {
                 this.flippedCards.forEach((card) => (card.cleared = true));
+
+                // ngecek kartu sudah habis atau belum
+                if (this.remainingCards.length === 0) {
+                  alert("You WON!!!");
+                  location.reload();
+                }
               }
 
               // tutup semua kartu
