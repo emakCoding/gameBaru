@@ -853,7 +853,7 @@ html {
 }
 
 .bg-taman {
-  background-image: url('/src/img/taman.png');
+  background-image: url('./src/img/taman.png');
 }
 
 .px-10 {

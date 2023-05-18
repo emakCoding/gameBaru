@@ -7,7 +7,7 @@ module.exports = {
         utama: ["Chicle"],
       },
       backgroundImage: {
-        taman: "url('/src/img/taman.png')",
+        taman: "url('./src/img/taman.png')",
       },
     },
   },
