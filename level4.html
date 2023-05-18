@@ -41,9 +41,25 @@
     <!-- this body -->
     <!-- this body -->
     <section
-      x-data="{isBantuan: false, isDiam: false, isLanjut: false, game()}"
+      x-data="{isSubmit: false}"
       class="w-screen h-screen flex flex-col justify-center items-center">
       <div class="h-[810px] w-[420px] bg-taman flex flex-col justify-center items-center gap-7 rounded-lg relative">
+        <!-- overlay submit start -->
+        <div
+          x-show="isSubmit"
+          class="inset-0 bg-taman absolute z-50 flex flex-col gap-10 items-center justify-center">
+          <div class="w-28 h-28 bg-red-500 rounded-full flex justify-center items-center">
+            <i class="fa-solid fa-check w-20 h-20"></i>
+          </div>
+
+          <p class="text-5xl font-utama text-center px-10">Yeay! Jawabanmu benar, kamu berhasil menyelesaikan tantangan pisu-pisu</p>
+          <button
+            @click="window.location.href = 'penutup.html'"
+            class="w-40 h-16 bg-red-500 rounded-3xl text-3xl font-utama">
+            Selesai
+          </button>
+        </div>
+        <!-- overlay end -->
         <!-- start -->
         <div class="w-11/12 h-full flex flex-col justify-center gap-10">
           <div class="flex justify-evenly items-center text-4xl font-utama">
@@ -68,7 +84,7 @@
           </div>
           <button
             type="submit"
-            x-on:click="window.location.href = 'penutup.html'"
+            @click="isSubmit = true"
             class="w-32 h-16 bg-red-500 rounded-3xl text-3xl font-utama self-center">
             Submit
           </button>
