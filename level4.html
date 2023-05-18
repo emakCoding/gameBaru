@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&family=Instrument+Serif&display=swap"
+      rel="stylesheet" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <!-- alpine -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- css -->
+    <link
+      href="/dist/output.css"
+      rel="stylesheet" />
+    <title>Halaman Muka</title>
+  </head>
+  <body>
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <section
+      x-data="{isBantuan: false, isDiam: false, isLanjut: false}"
+      class="w-screen h-screen flex flex-col justify-center items-center">
+      <div class="h-[810px] w-[420px] bg-taman flex flex-col justify-center items-center gap-7 rounded-lg relative">
+        <!-- start -->
+        <div class="w-11/12 h-full flex flex-col justify-center gap-10">
+          <div class="flex justify-evenly items-center text-4xl font-utama">
+            <h1 class="">Situasi</h1>
+            <h1 class="">Aksi</h1>
+          </div>
+
+          <div
+            x-data="{cards: [{abjad: 'a'}, {abjad: 'b'}, {abjad: 'c'}, {abjad: 'd'}, {abjad: 'e'}]}"
+            class="w-full flex gap-5">
+            <!-- <div class="w-1/2 flex flex-col gap-10">
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+            </div>
+            <div class="w-1/2 flex flex-col gap-10">
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+              <div
+                class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2"
+                id="a">
+                <p>a</p>
+              </div>
+            </div> -->
+
+            <div class="w-1/2 flex flex-col gap-10">
+              <template x-for="card in cards">
+                <div class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2">
+                  <p x-html="card.abjad"></p>
+                </div>
+              </template>
+            </div>
+            <div class="w-1/2 flex flex-col gap-10">
+              <template x-for="card in cards">
+                <div class="w-full h-14 px-5 font-utama text-5xl rounded-xl bg-white border-2">
+                  <p x-html="card.abjad"></p>
+                </div>
+              </template>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="w-32 h-16 bg-red-500 rounded-3xl text-3xl font-utama self-center">
+            Submit
+          </button>
+        </div>
+        <!-- end -->
+      </div>
+    </section>
+  </body>
+</html>

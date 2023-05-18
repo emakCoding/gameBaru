@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&family=Instrument+Serif&display=swap"
+      rel="stylesheet" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <!-- alpine -->
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- css -->
+    <link
+      href="/dist/output.css"
+      rel="stylesheet" />
+    <title>Log In</title>
+  </head>
+  <body>
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <section
+      x-data="{isLevelLockOpen: false}"
+      class="w-screen h-screen flex flex-col justify-center items-center">
+      <div class="h-[810px] w-[420px] bg-taman flex flex-col justify-center items-center gap-4 rounded-lg relative">
+        <!-- start -->
+
+        <!-- overlay start -->
+        <div
+          x-show="isLevelLockOpen"
+          class="inset-0 bg-taman absolute z-50 flex flex-col gap-10 items-center justify-center">
+          <p class="text-5xl font-utama text-center px-3">Ups, kamu harus menyelesaikan dulu level sebelumnya</p>
+          <button
+            @click="isLevelLockOpen = false"
+            class="w-20 h-14 bg-red-500 rounded-full text-3xl font-utama">
+            Okay
+          </button>
+        </div>
+        <!-- overlay end -->
+
+        <!-- input -->
+        <div class="w-full flex flex-col justify-center items-center">
+          <button
+            x-on:click="window.location.href = 'level1.html'"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8">
+            <p class="text-black">Level 1</p>
+          </button>
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+            <p class="text-black">Level 2</p>
+            <i class="fa-solid fa-lock w-12 h-12"></i>
+          </button>
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+            <p class="text-black">Level 3</p>
+            <i class="fa-solid fa-lock w-12 h-12"></i>
+          </button>
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+            <p class="text-black">Level 4</p>
+            <i class="fa-solid fa-lock w-12 h-12"></i>
+          </button>
+          <button
+            @click="isLevelLockOpen = true"
+            class="w-5/6 h-20 bg-white my-2 text-left font-utama font-extrabold text-5xl rounded-xl opacity-50 outline-none px-8 flex justify-between items-center">
+            <p class="text-black">Level 5</p>
+            <i class="fa-solid fa-lock w-12 h-12"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- end -->
+    </section>
+  </body>
+</html>

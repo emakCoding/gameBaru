@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&family=Instrument+Serif&display=swap"
+      rel="stylesheet" />
+    <!-- alpine -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- css -->
+    <link
+      href="/dist/output.css"
+      rel="stylesheet" />
+    <title>Halaman Muka</title>
+  </head>
+  <body>
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <section class="w-screen h-screen flex flex-col justify-center items-center">
+      <div class="h-[810px] w-[420px] bg-green-500 flex flex-col justify-center items-center gap-7 rounded-lg">
+        <!-- start -->
+        <!-- paragraf -->
+        <div class="w-5/6 font-utama text-4xl flex flex-col justify-center items-center mb-28">
+          <p class="text-center">Selamatt! kamu sudah menyelesaikan setiap rintangan pisu-pisu!!</p>
+        </div>
+        <!-- button -->
+        <div
+          x-data
+          class="font-utama text-white flex justify-center items-center gap-14">
+          <button
+            x-on:click="window.location.href = 'LogIn.html'"
+            class="text-2xl leading-none font-light w-28 h-20 bg-red-500 opacity-75 rounded-3xl">
+            Halaman Awal
+          </button>
+          <button
+            x-on:click="window.location.href = 'LogIn.html'"
+            class="text-2xl font-light w-28 h-20 bg-red-500 opacity-75 rounded-3xl">
+            Keluar
+          </button>
+        </div>
+        <!-- end -->
+      </div>
+    </section>
+  </body>
+</html>

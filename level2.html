@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&family=Instrument+Serif&display=swap"
+      rel="stylesheet" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <!-- alpine -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- css -->
+    <link
+      href="/dist/output.css"
+      rel="stylesheet" />
+    <title>Halaman Muka</title>
+  </head>
+  <body>
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <!-- this body -->
+    <section
+      x-data="{isBoleh: false, isTidak: false, isLanjut: false}"
+      class="w-screen h-screen flex flex-col justify-center items-center">
+      <div class="h-[810px] w-[420px] bg-taman flex flex-col justify-evenly items-center gap-7 rounded-lg relative">
+        <!-- start -->
+        <!-- overlay boleh start -->
+        <div
+          x-show="isBoleh"
+          class="inset-0 bg-taman absolute z-50 flex flex-col gap-10 items-center justify-center">
+          <div class="w-28 h-28 bg-red-500 rounded-full flex justify-center items-center">
+            <i class="fa-solid fa-x w-20 h-20"></i>
+          </div>
+          <p class="text-5xl font-utama text-center px-10">Ups! Jawabanmu salah, ayo ulangi.</p>
+          <button
+            @click="isBoleh = false"
+            class="w-40 h-16 bg-red-500 rounded-3xl text-3xl font-utama">
+            Ulangi
+          </button>
+        </div>
+        <!-- overlay end -->
+        <!-- overlay silang start -->
+        <div
+          x-show="isTidak"
+          class="inset-0 bg-taman absolute z-50 flex flex-col gap-10 items-center justify-center">
+          <div class="w-28 h-28 bg-red-500 rounded-full flex justify-center items-center">
+            <i class="fa-solid fa-check w-20 h-20"></i>
+          </div>
+
+          <p class="text-5xl font-utama text-center px-10">Yeay! Jawabanmu benar, ayo lanjut bermain</p>
+          <button
+            @click="isLanjut = true"
+            class="w-40 h-16 bg-red-500 rounded-3xl text-3xl font-utama">
+            Lanjut
+          </button>
+        </div>
+        <!-- overlay end -->
+        <!-- overlay lanjut start -->
+        <div
+          x-show="isLanjut"
+          class="inset-0 bg-taman absolute z-50 flex flex-col gap-20 items-center justify-center">
+          <p class="text-4xl font-utama text-center px-3">Wow! Kamu berhasil naik ke level selanjutnya</p>
+          <button
+            x-on:click="window.location.href = 'level3.html'"
+            class="w-40 h-16 bg-red-500 rounded-3xl text-3xl font-utama">
+            Level 3
+          </button>
+          <p class="text-4xl font-utama text-center px-3">Petunjuk level selanjutnya</p>
+        </div>
+        <!-- overlay end -->
+
+        <!-- paragraf -->
+        <div class="py-20 flex flex-col justify-center items-center gap-7">
+          <div class="w-5/6 font-utama text-4xl flex flex-col justify-center items-center mb-14">
+            <p class="text-center">Apakah memisahkan diri dari keramaian boleh dilakukan?</p>
+          </div>
+          <div class="w-10/12 h-2/3 flex justify-center items-center">
+            <img
+              src="./src/img/comunity.png"
+              alt="" />
+          </div>
+          <!-- button -->
+          <div class="font-utama text-white flex justify-center items-center gap-14">
+            <button
+              @click="isBoleh = true"
+              class="bg-slate-950/75 text-3xl leading-none font-light w-28 h-16 rounded-3xl flex justify-center items-center">
+              Boleh
+            </button>
+            <button
+              @click="isTidak = true"
+              class="bg-slate-950/75 text-3xl leading-none font-light w-28 h-16 rounded-3xl flex justify-center items-center">
+              Tidak
+            </button>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+    </section>
+  </body>
+</html>
