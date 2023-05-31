@@ -28,7 +28,7 @@
     <!-- alpine -->
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
     <!-- css -->
     <link
       href="./dist/output.css"
@@ -71,11 +71,11 @@
             x-data="game()"
             class="w-full h-2/4 flex flex-col flex-wrap gap-5">
             <template x-for="card in cards">
-              <div class="w-2/5 h-14 bg-white rounded-xl">
+              <div class="w-2/5 h-14 rounded-xl">
                 <div
                   @click="flipCard(card)"
-                  :class="'bg-' + (card.flipped ? card.color : 'green') + '-500'"
-                  x-show="!card.cleared"
+                  :class="'bg-' + (card.flipped ? card.color : 'white') + '-500'"
+                  x-bind:class="card.cleared ? 'bg-yellow-500' : 'bg-white'"
                   class="w-full h-14 px-5 font-utama text-5xl rounded-xl border-2">
                   <p x-html="card.abjad"></p>
                 </div>
@@ -113,7 +113,7 @@
             return this.cards.filter((card) => card.flipped);
           },
           get remainingCards() {
-            return this.cards.filter((card) => !card.cleared);
+            return this.cards.filter((card) => card.cleared);
           },
 
           async flipCard(card) {
