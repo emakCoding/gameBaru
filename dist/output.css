@@ -706,6 +706,10 @@ html {
   height: 10rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .w-10\/12 {
   width: 83.333333%;
 }
@@ -784,6 +788,10 @@ html {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .flex-col {
