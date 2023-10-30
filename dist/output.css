@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -191,6 +191,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
@@ -338,6 +342,14 @@ ul,
 menu {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
   padding: 0;
 }
 
@@ -597,6 +609,11 @@ html {
   margin-bottom: 1.25rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -607,6 +624,10 @@ html {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -665,16 +686,24 @@ html {
   height: 600px;
 }
 
-.h-\[810px\] {
-  height: 810px;
-}
-
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.h-2\/5 {
+  height: 40%;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .w-10\/12 {
@@ -741,16 +770,20 @@ html {
   width: 350px;
 }
 
-.w-\[420px\] {
-  width: 420px;
-}
-
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .flex-col {

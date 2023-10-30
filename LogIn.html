@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,7 +62,7 @@
         </button>
         <div
           x-show="isSettingOpen"
-          class="flex flex-col justify-center bg-taman items-center inset-0 gap-4 rounded-lg absolute z-40">
+          class="flex flex-col justify-center bg-green-600 items-center inset-0 gap-4 rounded-lg absolute z-40">
           <h1
             class="font-utama text-5xl text-black text-center"
             style="-webkit-text-stroke: 1px black">
@@ -94,7 +96,7 @@
         <!-- info start -->
         <div
           x-show="isInfoOpen"
-          class="inset-0 bg-taman flex flex-col justify-center items-center gap-4 rounded-lg absolute z-30"></div>
+          class="inset-0 bg-green-600 flex flex-col justify-center items-center gap-4 rounded-lg absolute z-30"></div>
         <button
           x-show="isInfoOpen"
           @click="isInfoOpen = false"
@@ -103,15 +105,15 @@
         </button>
         <div
           x-show="isInfoOpen"
-          class="flex flex-col justify-center items-center inset-0 gap-10 rounded-lg absolute z-40">
-          <h1 class="font-utama text-7xl">Info</h1>
-          <p class="font-utama text-4xl text-center">Pisu-Pisu merupakan game edukasi seksual yang dimana pemain harus menyelesaikan setiap rintangan dari masing-masing level dengan tingkat kesulitan dan instruksi yang berbeda</p>
+          class="flex flex-col justify-center items-center inset-0 gap-10 rounded-lg absolute z-40 mx-4">
+          <h1 class="font-utama text-5xl">Info</h1>
+          <p class="font-utama text-3xl text-center">Pisu-Pisu merupakan game edukasi seksual yang dimana pemain harus menyelesaikan setiap rintangan dari masing-masing level dengan tingkat kesulitan dan instruksi yang berbeda</p>
         </div>
         <!-- info end -->
         <!-- exit start -->
         <div
           x-show="isExitOpen"
-          class="inset-0 bg-taman flex flex-col justify-center items-center gap-4 rounded-lg absolute z-30"></div>
+          class="inset-0 bg-green-600 flex flex-col justify-center items-center gap-4 rounded-lg absolute z-30"></div>
 
         <div
           x-show="isExitOpen"
@@ -151,16 +153,16 @@
               @click.outside="isOpenNav = false"
               x-show="isOpenNav"
               x-bind:class="{'active': isOpenNav}"
-              class="w-24 h-52 -top-4 -right-6 gap-4 absolute z-20 flex justify-center bg-white/10 items-center flex-col">
+              class="w-20 h-40 -top-4 -right-6 gap-4 absolute z-20 flex justify-center bg-white/10 items-center flex-col">
               <button
                 @click="isSettingOpen = true, isOpenNav = false"
                 class="">
-                <i class="fa-solid fa-gear h-8 w-8 mt-2"></i>
+                <i class="fa-solid fa-gear h-6 w-6 mt-2"></i>
               </button>
               <button
                 @click="isInfoOpen = true, isOpenNav = false"
                 class="">
-                <i class="fa-solid fa-info h-8 w-8"></i>
+                <i class="fa-solid fa-info h-6 w-6"></i>
               </button>
               <button
                 @click="isExitOpen = true, isOpenNav = false"

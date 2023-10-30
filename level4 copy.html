@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,7 +45,7 @@
     <section
       x-data="{isSubmit: false}"
       class="w-screen h-screen flex flex-col justify-center items-center">
-      <div class="h-[810px] w-[420px] bg-taman flex flex-col justify-center items-center gap-7 rounded-lg relative">
+      <div class="h-[600px] w-[350px] bg-green-600 flex flex-col justify-center items-center gap-2 rounded-lg relative">
         <!-- overlay submit start -->
         <div
           x-show="isSubmit"
@@ -98,16 +100,16 @@
       const game = () => {
         return {
           cards: [
-            { abjad: "b", flipped: false, cleared: false, color: "red" },
-            { abjad: "d", flipped: false, cleared: false, color: "red" },
-            { abjad: "a", flipped: false, cleared: false, color: "red" },
-            { abjad: "e", flipped: false, cleared: false, color: "red" },
-            { abjad: "c", flipped: false, cleared: false, color: "red" },
-            { abjad: "a", flipped: false, cleared: false, color: "red" },
-            { abjad: "e", flipped: false, cleared: false, color: "red" },
-            { abjad: "c", flipped: false, cleared: false, color: "red" },
-            { abjad: "b", flipped: false, cleared: false, color: "red" },
-            { abjad: "d", flipped: false, cleared: false, color: "red" },
+            {abjad: "b", flipped: false, cleared: false, color: "red"},
+            {abjad: "d", flipped: false, cleared: false, color: "red"},
+            {abjad: "a", flipped: false, cleared: false, color: "red"},
+            {abjad: "e", flipped: false, cleared: false, color: "red"},
+            {abjad: "c", flipped: false, cleared: false, color: "red"},
+            {abjad: "a", flipped: false, cleared: false, color: "red"},
+            {abjad: "e", flipped: false, cleared: false, color: "red"},
+            {abjad: "c", flipped: false, cleared: false, color: "red"},
+            {abjad: "b", flipped: false, cleared: false, color: "red"},
+            {abjad: "d", flipped: false, cleared: false, color: "red"},
           ],
           get flippedCards() {
             return this.cards.filter((card) => card.flipped);

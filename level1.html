@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,12 +45,12 @@
     <section
       x-data="{isCeklist: false, isSilang: false, isLanjut: false}"
       class="w-screen h-screen flex flex-col justify-center items-center">
-      <div class="h-[810px] w-[420px] bg-taman flex flex-col justify-between items-center gap-7 rounded-lg relative">
+      <div class="h-[600px] w-[350px] bg-green-600 flex flex-col justify-center items-center gap-2 rounded-lg relative">
         <!-- start -->
         <!-- overlay ceklis start -->
         <div
           x-show="isCeklist"
-          class="inset-0 bg-taman absolute z-50 flex flex-col gap-10 items-center justify-center">
+          class="inset-0 bg-green-600 absolute z-50 flex flex-col gap-10 items-center justify-center">
           <div class="w-28 h-28 bg-red-500 rounded-full flex justify-center items-center">
             <i class="fa-solid fa-x w-20 h-20"></i>
           </div>
@@ -63,7 +65,7 @@
         <!-- overlay silang start -->
         <div
           x-show="isSilang"
-          class="inset-0 bg-taman absolute z-50 flex flex-col gap-10 items-center justify-center">
+          class="inset-0 bg-green-600 absolute z-50 flex flex-col gap-10 items-center justify-center">
           <div class="w-28 h-28 bg-red-500 rounded-full flex justify-center items-center">
             <i class="fa-solid fa-check w-20 h-20"></i>
           </div>
@@ -79,7 +81,7 @@
         <!-- overlay lanjut start -->
         <div
           x-show="isLanjut"
-          class="inset-0 bg-taman absolute z-50 flex flex-col gap-20 items-center justify-center">
+          class="inset-0 bg-green-600 absolute z-50 flex flex-col gap-20 items-center justify-center">
           <p class="text-4xl font-utama text-center px-3">Wow! Kamu berhasil naik ke level selanjutnya</p>
           <button
             x-on:click="window.location.href = 'level2.html'"
